@@ -8,7 +8,7 @@ const instance = axios.create({
 
 
 // Add a request interceptor
-//  全局请求拦截，发送请求之前执行
+//  全局请求拦截，发送请求之前执行.
 instance.interceptors.request.use(function (config) {
     // Do something before request is sent
     // console.log("请求拦截:请求发出成功");
