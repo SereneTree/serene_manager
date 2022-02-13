@@ -1,0 +1,11 @@
+.container_style {
+  display: flex;
+  width: 100%;
+  min-width: 500px;
+}
+.container_style .card_style {
+  justify-content: center;
+}
+.container_style .card_style .table_style {
+  width: 100vw;
+}

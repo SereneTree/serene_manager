@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "username": "4433",
+      "password": "4234",
+      "id": "CYceC6O"
+    },
+    {
+      "username": "424234",
+      "password": "42344",
+      "id": "oZKmdgY"
+    },
+    {
+      "username": "serene",
+      "password": "31434u3149",
+      "id": "XnPLdIJ"
+    },
+    {
+      "username": "11",
+      "password": "22",
+      "id": "1710ccy"
+    }
+  ],
+  "activities": [
+    {
+      "activityName": "这是第一个活动",
+      "activityDate": "2022-02-09T10:01:11.744Z",
+      "type": [
+        "游戏",
+        "生活"
+      ],
+      "coverPic": [
+        {
+          "uid": "rc-upload-1644746431773-2",
+          "lastModified": 1644507328765,
+          "lastModifiedDate": "2022-02-10T15:35:28.765Z",
+          "name": "vip.png",
+          "size": 6211,
+          "type": "image/png",
+          "percent": 100,
+          "originFileObj": {
+            "uid": "rc-upload-1644746431773-2"
+          },
+          "status": "done",
+          "response": {
+            "name": "xxx.png",
+            "status": "done",
+            "url": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
+            "thumbUrl": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+          },
+          "xhr": {}
+        }
+      ],
+      "onlineState": false,
+      "id": 2
+    },
+    {
+      "activityName": "222",
+      "activityDate": "2022-02-09T10:46:00.573Z",
+      "type": [
+        "动漫"
+      ],
+      "onlineState": false,
+      "id": 3
+    }
+  ]
+}
