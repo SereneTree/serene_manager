@@ -17,6 +17,10 @@ yarn start
 //启动json-sever搭建的服务端，需使用如下命令启动文档 db.json
 json-server --port 5000 --watch db.json 
 ```
+## 未来迭代功能点
+- 活动列表增加筛选、分页功能等
+- 消息通知支持对接服务端等
+- ……
 
 ## 所需插件
 ```
