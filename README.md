@@ -9,11 +9,13 @@
 - 活动列表：用get请求服务端获取活动数据，支持调用服务端API接口修改活动状态、删除活动等
 - 消息中心：支持消息展示，利用redux共享未读消息数据，在菜单栏中红点提示未读消息
 
-## 服务端
-使用json-sever搭建服务端，需使用如下命令启动文档 db.json ：
+## 如何启动？
+```
+//项目启动
+yarn start 
 
-``` 
-json-server --port 5000 --watch db.json
+//启动json-sever搭建的服务端，需使用如下命令启动文档 db.json
+json-server --port 5000 --watch db.json 
 ```
 
 ## 所需插件
