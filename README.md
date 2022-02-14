@@ -18,7 +18,7 @@ json-server --port 5000 --watch db.json
 
 ## 所需插件
 ```
-rudex         redux核心库
+redux         redux核心库
 react-redux   react中集成redux的插件
 redux-thunk   redux插件
 axios         网络请求
