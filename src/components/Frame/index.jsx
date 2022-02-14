@@ -35,6 +35,8 @@ function Frame(props) {
     </Menu>
   );
 
+  console.log('frame渲染次数');
+
   return (
     <Layout>
       {/* 顶部 */}

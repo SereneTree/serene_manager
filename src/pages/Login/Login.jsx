@@ -32,6 +32,8 @@ export default function Login() {
     console.log('提交失败:', errorInfo);
   };
 
+  console.log('login渲染');
+
   return (
     <Layout>
 

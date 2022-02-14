@@ -4,49 +4,51 @@
       "username": "serene",
       "password": "31434u3149",
       "id": "XnPLdIJ"
+    },
+    {
+      "username": "34243",
+      "password": "423424",
+      "id": "wTTS1Nq"
+    },
+    {
+      "username": "423424",
+      "password": "4234",
+      "id": "EtzzXDJ"
+    },
+    {
+      "username": "42342",
+      "password": "4234",
+      "id": "VVXQlmN"
+    },
+    {
+      "username": "42342432",
+      "password": "42343",
+      "id": "ErJnmlO"
     }
   ],
   "activities": [
     {
-      "activityName": "这是第一个活动",
-      "activityDate": "2022-02-09T10:01:11.744Z",
+      "key": 6,
+      "id": 6,
+      "activityName": "523452345",
+      "activityDate": "2022-02-09",
+      "coverPic": {
+        "type": "img",
+        "key": null,
+        "ref": null,
+        "props": {
+          "src": "https://p6-sign.bdxiguaimg.com/top-static-files-outer/79a4689b-5262-4f0f-a6cf-d1bc5b685813~noop.image?x-expires=1959847299&x-signature=iO1JnDKDd8TobvNWAmrYB11I4rY%3D",
+          "alt": "523452345",
+          "width": "150px"
+        },
+        "_owner": null,
+        "_store": {}
+      },
       "type": [
-        "游戏",
-        "生活"
+        "动漫",
+        "游戏"
       ],
-      "coverPic": [
-        {
-          "uid": "rc-upload-1644746431773-2",
-          "lastModified": 1644507328765,
-          "lastModifiedDate": "2022-02-10T15:35:28.765Z",
-          "name": "vip.png",
-          "size": 6211,
-          "type": "image/png",
-          "percent": 100,
-          "originFileObj": {
-            "uid": "rc-upload-1644746431773-2"
-          },
-          "status": "done",
-          "response": {
-            "name": "xxx.png",
-            "status": "done",
-            "url": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-            "thumbUrl": "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-          },
-          "xhr": {}
-        }
-      ],
-      "onlineState": false,
-      "id": 2
-    },
-    {
-      "activityName": "222",
-      "activityDate": "2022-02-09T10:46:00.573Z",
-      "type": [
-        "动漫"
-      ],
-      "onlineState": false,
-      "id": 3
+      "onlineState": false
     }
   ]
 }

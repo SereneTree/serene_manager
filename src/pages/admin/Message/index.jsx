@@ -15,6 +15,8 @@ function Message(props) {
   //调用信息已读函数
   const isRead = () => props.isRead(true)
 
+  console.log('通知中心页面渲染');
+
   return (
     <div>
       <Card className='card_style' title="通知中心" extra={<Button type="primary" onClick={isRead}> 全部已读 </Button>}>

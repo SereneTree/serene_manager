@@ -21,23 +21,7 @@ export default function Edit() {
         form.setFieldsValue({ activityName: res.activityName, type: res.type, activityDate: moment(res.activityDate) });
       })
     }
-  }, []);
-
-  //活动名称改变时打印
-  function nameOnChange(event) {
-    console.log('活动名称', event.target.value);
-  }
-
-  //所属品类改变时打印
-  function typeOnChange(checkedValues) {
-    console.log('所属品类', checkedValues);
-  }
-
-  //活动上线时间日期改变时打印
-  function dateOnChange(date, dateString) {
-    console.log('活动上线日期date', date);
-    console.log('活动上线日期dateString', dateString);
-  }
+  }, [editKey,form]);
 
   //上传图片反馈和打印
   const props = {
@@ -100,6 +84,8 @@ export default function Edit() {
 
   };
 
+  console.log('活动编辑页渲染');
+
   return (
     <div className='container_style'>
       <Card className='card_style' title={editKey ? "编辑活动" : '创建活动'}  >
@@ -116,7 +102,7 @@ export default function Edit() {
               label="活动名称"
               rules={[{ required: true, message: '请输入活动名称!' }]}
             >
-              <Input placeholder="请输入活动名称" onChange={nameOnChange} />
+              <Input placeholder="请输入活动名称"/>
             </Form.Item>
 
             <Form.Item
@@ -124,11 +110,11 @@ export default function Edit() {
               label="上线日期"
               rules={[{ required: true, message: '请选择活动上线日期' }]}
             >
-              <DatePicker placeholder="请选择活动上线日期" onChange={dateOnChange} />
+              <DatePicker placeholder="请选择活动上线日期"/>
             </Form.Item>
 
             <Form.Item name='type' label="所属品类" rules={[{ required: true, message: '请选择活动所属品类' }]}>
-              <Checkbox.Group onChange={typeOnChange}>
+              <Checkbox.Group>
                 <Row className='row_style'>
                   <Col span={5}><Checkbox value="动漫">动漫</Checkbox></Col>
                   <Col span={5}><Checkbox value="游戏">游戏</Checkbox></Col>
@@ -144,7 +130,7 @@ export default function Edit() {
               name="coverPic"
               action="http://localhost:5000/activities"
               valuePropName="fileList"
-              // 如果没有下面这一句会报错
+              //把上传数据转换成数组类型
               getValueFromEvent={normFile}
             >
               <Upload {...props}>

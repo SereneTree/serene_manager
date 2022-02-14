@@ -7,7 +7,6 @@ import { delOne, listApi, modifyOne } from '../../../../services/activities';
 export default function List() {
 
   const [taskList, setTaskList] = useState([])
-  const [taskListLength, setTaskListLength] = useState(0)
   const navigate = useNavigate();
 
   //表格基本设置
@@ -58,14 +57,13 @@ export default function List() {
       key: 'onlineState',
       dataIndex: 'onlineState',
       render: (onlineState, record) => {
-        console.log('online record', record);
+        // console.log('online record', record);
 
         //活动上下线
         const pushOnline = () => {
           console.log('pushOnline record', record);
           modifyOne(record.key, { ...record, onlineState: !record.onlineState }).then(res => {
-            let a = taskListLength
-            setTaskListLength(a - 1)
+            fetchTaskList()
             message.success(`活动${onlineState ? "下线" : "上线"}成功`)
           }).catch(err => {
             message.error(`操作失败`);
@@ -81,8 +79,7 @@ export default function List() {
         const deleteActivity = () => {
           console.log('deleteActivity record', record);
           delOne(record.key).then(res => {
-            let a = taskListLength
-            setTaskListLength(a - 1)
+            fetchTaskList()
             message.success('已删除该活动')
           }).catch(err => {
             message.error('操作失败')
@@ -109,8 +106,7 @@ export default function List() {
     },
   ];
 
-  //当活动数量变化时，重新调用listApi函数获取服务端数据
-  useEffect(() => {
+  const fetchTaskList = () => {
     listApi().then(res => {
       setTaskList(res.map((dataObj, index) => {
         return {
@@ -123,12 +119,17 @@ export default function List() {
           onlineState: dataObj.onlineState
         }
       }))
-      setTaskListLength(res.length)
     }).catch(() => {
       message.error("获取数据失败");
-    }).finally();
-  }, [taskListLength]);
+    })
+  }
 
+  //当活动数量变化时，重新调用listApi函数获取服务端数据
+  useEffect(() => {
+    fetchTaskList()
+  }, []);
+
+  console.log('活动列表页渲染');
 
   return (
     <div className='container_style'>
