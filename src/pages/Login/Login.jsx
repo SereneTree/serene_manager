@@ -11,7 +11,7 @@ export default function Login() {
 
   const { Header } = Layout;
 
-  //登陆提交成功
+  //登录提交成功
   const onFinish = (values) => {
     if (values) {
       loginApi({
@@ -27,7 +27,7 @@ export default function Login() {
     }
   };
 
-  //登陆提交成功
+  //登录提交成功
   const onFinishFailed = (errorInfo) => {
     console.log('提交失败:', errorInfo);
   };
@@ -52,8 +52,8 @@ export default function Login() {
         style={{ marginLeft: "25%", width: '50%', marginTop: '60px' }}
       >
         <Alert
-          // message="登陆提示"
-          description="随意输入用户名和账号即可登陆哦～"
+          // message="登录提示"
+          description="随意输入用户名和账号即可登录哦～"
           type="info"
           closable
         />
@@ -91,7 +91,7 @@ export default function Login() {
 
           <Form.Item wrapperCol={{ offset: 10 }}>
             <Button type="primary" htmlType="submit">
-              登陆
+              登录
             </Button>
           </Form.Item>
 

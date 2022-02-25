@@ -61,8 +61,8 @@ export default function List() {
 
         //活动上下线
         const pushOnline = () => {
-          console.log('pushOnline record', record);
-          modifyOne(record.key, { ...record, onlineState: !record.onlineState }).then(res => {
+          // console.log('pushOnline record', record);
+          modifyOne(record.id, { ...record, onlineState: !record.onlineState }).then(res => {
             fetchTaskList()
             message.success(`活动${onlineState ? "下线" : "上线"}成功`)
           }).catch(err => {
@@ -72,13 +72,13 @@ export default function List() {
 
         //修改活动跳转
         const editActivity = () => {
-          navigate(`edit?id=${record.key}`)
+          navigate(`edit?id=${record.id}`)
         }
 
         //删除活动
         const deleteActivity = () => {
           console.log('deleteActivity record', record);
-          delOne(record.key).then(res => {
+          delOne(record.id).then(res => {
             fetchTaskList()
             message.success('已删除该活动')
           }).catch(err => {
@@ -111,7 +111,7 @@ export default function List() {
       setTaskList(res.map((dataObj, index) => {
         return {
           key: dataObj.id,
-          id: index + 1,
+          id: dataObj.id,
           activityName: dataObj.activityName,
           activityDate: dataObj.activityDate.slice(0, 10),
           coverPic: <img src="https://p6-sign.bdxiguaimg.com/top-static-files-outer/79a4689b-5262-4f0f-a6cf-d1bc5b685813~noop.image?x-expires=1959847299&x-signature=iO1JnDKDd8TobvNWAmrYB11I4rY%3D" alt={dataObj.activityName} width='150px'></img>,
@@ -124,7 +124,7 @@ export default function List() {
     })
   }
 
-  //当活动数量变化时，重新调用listApi函数获取服务端数据
+  //页面初始化时拉取活动列表数据
   useEffect(() => {
     fetchTaskList()
   }, []);

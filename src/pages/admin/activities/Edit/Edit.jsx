@@ -17,8 +17,11 @@ export default function Edit() {
   useEffect(() => {
     if (editKey) {
       getOneById(editKey).then(res => {
-        console.log(res);
+        console.log('res',res);     
         form.setFieldsValue({ activityName: res.activityName, type: res.type, activityDate: moment(res.activityDate) });
+      })
+      .catch(err => {
+        console.log(err)
       })
     }
   }, [editKey,form]);
@@ -53,7 +56,6 @@ export default function Edit() {
 
    //活动提交成功
   const onFinish = (values) => {
-    console.log('提交成功', values);
     if (values) {
       console.log('提交成功', values);
       if (editKey) {
